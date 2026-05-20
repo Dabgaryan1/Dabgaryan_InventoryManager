@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+//this class represents an item in the inventory
 @Entity
 public class Item {
     @Id
