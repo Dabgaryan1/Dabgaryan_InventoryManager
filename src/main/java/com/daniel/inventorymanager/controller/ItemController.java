@@ -12,7 +12,7 @@ public class ItemController {
     private final ItemService itemService;
 
     //constructor injection of the service
-    public ItemController(ItemService itemService) {
+    public ItemController(@RequestBody ItemService itemService) {
         this.itemService = itemService;
     }
 
