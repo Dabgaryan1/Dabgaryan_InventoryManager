@@ -36,9 +36,9 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    //get item by name from database
-    public Item getItemByName(String name) {
-        return itemRepository.findByName(name).orElseThrow(() -> new RuntimeException("Item not found"));
+    //get all items by name from database
+    public List<Item> getItemsByName(String name) {
+        return itemRepository.findByName(name);
     }
 
     //get items by category from database

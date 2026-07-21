@@ -12,7 +12,7 @@ public class ItemController {
     private final ItemService itemService;
 
     //constructor injection of the service
-    public ItemController(@RequestBody ItemService itemService) {
+    public ItemController(ItemService itemService) {
         this.itemService = itemService;
     }
 
@@ -30,8 +30,8 @@ public class ItemController {
 
     //endpoint to get an item by name from the database
     @GetMapping("/items/name/{name}")
-    public Item getItemByName(@PathVariable String name) {
-        return itemService.getItemByName(name);
+    public List<Item> getItemsByName(@PathVariable String name) {
+        return itemService.getItemsByName(name);
     }
 
     //endpoint to get items by category from the database
